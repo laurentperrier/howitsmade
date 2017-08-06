@@ -1,0 +1,59 @@
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	background: #fff;
+	color: rgba(#000, 0.8);
+	height: 100%;
+	line-height: 1.25em;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
+	margin: 0px;
+	line-height: 1.25em;
+}
+
+p {
+	margin: 0px;
+	line-height: 1.65em;
+}
+
+ul {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+	&:hover {
+		transition: all 0.5s ease;
+		color: darkBlue;
+	}
+}
+
+button {
+	border: 0px;
+	background: transparent;
+	padding: 0px;
+	outline: none !important;
+	cursor: pointer;
+}
+
+input, select, textarea {
+	outline: 0;
+}
+
+textarea {
+	resize: none;
+}

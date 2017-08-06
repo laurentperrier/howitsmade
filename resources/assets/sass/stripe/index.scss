@@ -1,0 +1,18 @@
+#stripe-page {
+	main {
+		overflow: hidden;
+	}
+	header {
+		position: relative;
+		// padding: 300px;
+		max-width: 100%;
+	}
+	@import "stripe/stripes";
+	#intro {
+		height: 760px;
+		color: #ffffff;
+		max-width: 1040px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
