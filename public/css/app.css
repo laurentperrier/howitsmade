@@ -556,14 +556,9 @@ textarea {
   resize: none;
 }
 
-#stripe-page header {
-  position: relative;
-  max-width: 100%;
-}
-
 #stripe-page #stripes {
   height: 760px;
-  background: linear-gradient(150deg, #53f 15%, #05d5ff 70%, #a6ffcb 94%);
+  background: linear-gradient(150deg, #5533ff 15%, #05d5ff 70%, #a6ffcb 94%);
   -webkit-transform: skewY(-12deg);
           transform: skewY(-12deg);
   -webkit-transform-origin: 0;
@@ -574,39 +569,35 @@ textarea {
 #stripe-page #stripes span {
   position: absolute;
   height: 190px;
+  width: 33.3333%;
 }
 
 #stripe-page #stripes span:nth-child(1) {
-  background: #53f;
-  width: 33.3333%;
+  background: #5533ff;
   top: 0px;
   left: -16.6666%;
 }
 
 #stripe-page #stripes span:nth-child(2) {
   background: #4553ff;
-  width: 33.3333%;
   top: 0px;
   left: 16.6666%;
 }
 
 #stripe-page #stripes span:nth-child(3) {
   background: #4f40ff;
-  width: 33.3333%;
   top: 0px;
   left: 49.9998%;
 }
 
 #stripe-page #stripes span:nth-child(4) {
   background: #25ddf5;
-  width: 33.33333%;
   top: 380px;
-  right: -16.66666%;
+  right: -16.6666%;
 }
 
 #stripe-page #stripes span:nth-child(5) {
   background: #1fa2ff;
-  width: 33.33333%;
   bottom: 0px;
 }
 
