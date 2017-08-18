@@ -1,0 +1,74 @@
+nav {
+	position: absolute;
+	top: 10px;
+	width: 100%;
+	display: flex;
+	perspective: 2000px;
+	.container {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	.nav-items {
+		display: flex;
+	}
+	.nav-item {
+		display: block;
+		padding: 0px 25px;
+		height: 50px;
+		line-height: 50px;
+		color: white;
+		&:hover {
+			color: rgba(white, 0.25);
+		}
+	}
+	.dropdown {
+		position: absolute;
+		top: 50px;
+		transform: rotateX(-15deg);
+		transform-origin: 50% -50px;
+		opacity: 0;
+		transition: all .5s;
+		&.active {
+			transform: rotateX(0deg);
+			opacity: 1;
+		}
+		.background {
+			position: absolute;
+			width: 380px;
+			height: 365px;
+			background: white;
+			box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+			border-radius: 4px;
+			transition: all .5s;
+		}
+		.arrow {
+			position: absolute;
+			width: 12px;
+			height: 12px;
+			background: white;
+			border-top-left-radius: 4px;
+			transition: all .5s;
+			top: -6px;
+		}
+		.links {
+			position: relative;
+			width: 300px;
+			height: 365px;
+			overflow: hidden;
+			transition: all .5s;
+		}
+		.link-group {
+			position: absolute;
+			padding: 25px;
+			transition: opacity .5s;
+			&.left {
+				transform: translateX(-150px);
+				opacity: 0;
+			}
+			&.right {
+				transform: translateX(150px);
+				opacity: 0;
+			}
+		}
+	}
+}

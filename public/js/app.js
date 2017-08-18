@@ -785,7 +785,54 @@ __webpack_require__(10);
 window.Vue = __webpack_require__(33);
 
 var app = new Vue({
-    el: '#app'
+	el: '#app',
+	data: function data() {
+		return {
+			nav: {
+				open: false,
+				active: 'products',
+				links: {
+					products: {
+						left: 0,
+						width: 368
+					},
+					developers: {
+						left: 0,
+						width: 422
+					}
+				}
+			}
+		};
+	},
+
+	computed: {
+		positionTransform: function positionTransform() {
+			var left = this.nav.links[this.nav.active].left - this.nav.links[this.nav.active].width / 2;
+			return 'translateX(' + left + 'px)';
+		},
+		arrowTransform: function arrowTransform() {
+			var left = this.nav.links[this.nav.active].left - 6;
+			return 'translateX(' + left + 'px) rotate(45deg)';
+		}
+	},
+	mounted: function mounted() {
+		this.nav.links.products.left = this.$refs.productsLink.getBoundingClientRect().left + this.$refs.productsLink.offsetWidth / 2;
+		this.nav.links.developers.left = this.$refs.developersLink.getBoundingClientRect().left + this.$refs.developersLink.offsetWidth / 2;
+	},
+
+	methods: {
+		openDropdown: function openDropdown(navitem) {
+			this.nav.open = true;
+			this.nav.active = navitem;
+		},
+		closeDropdown: function closeDropdown() {
+			this.nav.open = false;
+		},
+		keepDropdownOpen: function keepDropdownOpen() {
+			var opacity = getComputedStyle(this.$refs.dropdown).getPropertyValue('opacity');
+			if (opacity > 0) this.nav.open = true;
+		}
+	}
 });
 
 /***/ }),
